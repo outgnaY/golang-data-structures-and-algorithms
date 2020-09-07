@@ -63,6 +63,8 @@ func (doubleListWithDummy *DoubleListWithDummy) DelHead() (bool, int) {
 	oldHead := doubleListWithDummy.dummyHead.next
 	oldHead.next.prev = doubleListWithDummy.dummyHead
 	doubleListWithDummy.dummyHead.next = oldHead.next
+	oldHead.prev = nil
+	oldHead.next = nil
 	return true, oldHead.val
 }
 
@@ -73,5 +75,7 @@ func (doubleListWithDummy *DoubleListWithDummy) DelTail() (bool, int) {
 	oldTail := doubleListWithDummy.dummyTail.prev
 	oldTail.prev.next = doubleListWithDummy.dummyTail
 	doubleListWithDummy.dummyTail.prev = oldTail.prev
+	oldTail.prev = nil
+	oldTail.next = nil
 	return true, oldTail.val
 }

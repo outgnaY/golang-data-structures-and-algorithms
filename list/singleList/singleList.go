@@ -54,6 +54,7 @@ func (singleList *SingleList) DelHead() (bool, int) {
 	if singleList.head == nil {
 		singleList.tail = nil
 	}
+	oldHead.next = nil
 	return true, oldHead.val
 }
 

@@ -1,7 +1,5 @@
 package main
 
-import "dataStructure/list/doubleList"
-
 func main() {
 	// -------- singleList -------- //
 	/*
@@ -39,6 +37,7 @@ func main() {
 	list.DumpListReverse()
 	*/
 	// -------- doubleListWithDummy -------- //
+	/*
 	list := doubleList.NewDoubleListWithDummy()
 	list.DumpList()
 	list.DumpListReverse()
@@ -58,4 +57,5 @@ func main() {
 	list.DelTail()
 	list.DumpList()
 	list.DumpListReverse()
+	*/
 }

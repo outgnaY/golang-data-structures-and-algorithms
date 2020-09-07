@@ -72,6 +72,7 @@ func (doubleList *DoubleList) DelHead() (bool, int) {
 	} else {
 		doubleList.head.prev = nil
 	}
+	oldHead.next = nil
 	return true, oldHead.val
 }
 
@@ -86,6 +87,7 @@ func (doubleList *DoubleList) DelTail() (bool, int) {
 	} else {
 		doubleList.tail.next = nil
 	}
+	oldTail.prev = nil
 	return true, oldTail.val
 }
 
